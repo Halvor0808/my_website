@@ -1,17 +1,17 @@
-import React from "react";
-import Image from 'next/image'
+import Image from 'next/image';
 
 
 const Account = (props) => {
-    const dark_invert = props.dark_invert
+    const dark_invert = props.dark_invert;
+    const newClassName = dark_invert + ''; // Can add more to class here
     return (
-        <>
-            <a
-                className=""
-                href={props.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                >
+        <a
+            className="p-3 pt-1 pb-2 rounded-xl bg-neutral-800 m-2"
+            href={props.href}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <h2 className='text-center p-0 text-white'>{props.title}</h2>
                 <Image
                     src={props.src}
                     alt={props.alt}
@@ -20,8 +20,7 @@ const Account = (props) => {
                     height={96}
                     priority
                 />
-                </a>
-        </>
+        </a>
         );
     }
     
