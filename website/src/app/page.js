@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import AccountGallery from './components/accountGallery'
 import Profile from './components/profile'
+import NavList from './components/navList'
 
 export default function Home() {
   return (
     <main className="">
+      <NavList/>
       <Profile/>
       <div className="">
         <Image
