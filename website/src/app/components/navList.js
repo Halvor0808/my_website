@@ -2,7 +2,7 @@ import React from "react";
 
 const NavList = () => {
   return (
-    <nav className="bg-neutral-800 border-b-neutral-400/50 border-b-2 border-solid">
+    <nav className="bg-neutral-800 border-b-neutral-400/50 border-b-2 border-solid mb-6">
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div className="relative flex h-16 items-center justify-between">
         <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
