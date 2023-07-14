@@ -14,14 +14,14 @@ const NavList = () => {
                 text-sm font-medium hover:border-neutral-900 border-2 hover:border-solid"
                 style={{"border-color": "transparent" }}  */}
               <a
-                href=""
+                href="/"
                 className="bg-neutral-900/50 text-white rounded-md px-3 py-2 text-sm font-medium border-neutral-900 border-2 border-solid"
                 aria-current="page"
               >
                 Home
               </a>
               <a
-                href="#Projects"
+                href="/projects"
                 className="text-gray-300 hover:bg-neutral-700/50 hover:text-white rounded-md px-3 py-2 text-sm font-medium hover:border-neutral-900 border-2 hover:border-solid"
                 style={{"borderColor": "transparent" }} 
               >
