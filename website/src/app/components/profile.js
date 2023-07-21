@@ -1,13 +1,9 @@
 import React from "react";
-import Image from 'next/image'
-
 
 const Profile = () => {
     return (
         <div>
-            <h2 className=" font-mono text-4xl  flex-shrink text-center">Hello and welcome to my website</h2><br/>
             <div id="profile" className="">
-                
                 <p className="w-3/4 m-4 text-sm text-left flex">
                     <img
                         src="/halvor_brunt.jpeg"
