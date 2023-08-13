@@ -55,3 +55,28 @@ table {
 td {
   padding: 3px 0;
 }
+
+.navTab {
+  padding: 6px;
+  border-radius: 0.5rem;
+  color: rgb(155, 155, 155);
+  background-color: rgba(76, 76, 76, 0.5);
+  border: 2px solid rgba(127, 127, 127, 0.84);
+}
+
+.navTab:hover {
+  color: whitesmoke;
+  background-color: rgba(110, 110, 110, 0.5);
+  border: 2px solid rgba(206, 206, 206, 0.84);
+  box-shadow: 2px 2px 5px #000000;
+  text-shadow: 2px 2px 3px #000000;
+
+}
+
+.activeTab {
+  height: auto;
+  color: rgba(245, 245, 245, 0.864);
+  background-color: rgba(110, 110, 110, 0.5);
+  border: 2px solid rgba(206, 206, 206, 0.84);
+  box-shadow: 2px 2px 2.5px #000000;
+}
