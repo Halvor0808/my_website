@@ -1,12 +1,17 @@
 'use client'
 import { React, useState } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
+import {capitalize} from '../utils/stringUtils'
 
-const NavList = () => {
 
-  const [activeTab, setActiveTab] = useState("home")
+const NavList = ({tabs}) => {
+
+  const pathname = usePathname().slice(1) /*Remove '/' from path*/  
+  
+  const [activeTab, setActiveTab] = useState(pathname)
   const handleTabSelection = (tab) => {
-    setActiveTab(tab);
+    setActiveTab(tab);  
   }
   
   return (
@@ -14,18 +19,18 @@ const NavList = () => {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex space-x-4">
-              <Link href="/"
-                className={activeTab === "home" ? "text-red-600" : ""}
-                onClick={() => handleTabSelection("home")}>
-                Home
-              </Link>
+            <div className="flex space-x-2">
 
-              <Link href="/projects"
-                className={activeTab === "projects" ? "text-red-600" : ""}
-                onClick={() => handleTabSelection("projects")}>
-                About
-              </Link>
+              {tabs.map(tab => (
+                <Link 
+                key={tab}
+                href={tab}
+                className={"navTab " + (activeTab === tab ? 'activeTab' : '')}
+                onClick={() => handleTabSelection(tab)}
+                >
+                  {capitalize(tab)}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
