@@ -5,8 +5,8 @@ const ProjectList = (props) => {
 
     const projects = props.projects
 
-    function handleChangeDescription(project) {
-        return props.changeDescription(project.projectDescription, project.url)
+    function handleChangeProject(project) {
+        return props.changeProject(project)
     }
 
     const [selectedProject, setSelectedProject] = useState(0)
@@ -15,7 +15,7 @@ const ProjectList = (props) => {
         <li
             key={index}
             onClick={() => {
-                handleChangeDescription(project)
+                handleChangeProject(project)
             }}
         >
             <Project
